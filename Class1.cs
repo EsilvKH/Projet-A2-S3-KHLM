@@ -6,5 +6,7 @@ namespace Projet_A2_S3
 {
     class Class1
     {
+        Lol mdr
+            
     }
 }
