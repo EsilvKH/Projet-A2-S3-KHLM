@@ -55,6 +55,10 @@ namespace Projet_A2_S3
                 }
             }
         }
+        public bool RechDichoRecursif(string mot)
+        {
+            return RechDicoRecursif(mot, 0, _listeDeMots.Length);
+        }
         public bool RechDicoRecursif(string mot, int debut, int fin)
         {
             int milieu = (debut+fin)/2;//on crée une nouvelle instance de la variable milieu à chaque utilisation de la méthode
@@ -78,7 +82,5 @@ namespace Projet_A2_S3
             }
             return aff;
         }
-
     }
-
 }
