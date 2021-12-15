@@ -46,6 +46,7 @@ namespace Projet_A2_S3
                             MainCouranteJoueur1[j]= Sac.retire_jeton(r);
                         }
                     }
+                    compteurDajout--;
                 }
                 
             }
