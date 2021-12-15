@@ -45,16 +45,17 @@ namespace Projet_A2_S3
             Jeton jeton = new Jeton(Convert.ToChar(sousChaîne[0]), Convert.ToInt32(sousChaîne[1]), Convert.ToInt32(sousChaîne[3]));
             return jeton;
         }
-        public static Jeton retire_jeton(Random r)
+        public static Jeton retire_jeton(Random r, Sac_Jetons Sac)
         {
-            //j'ai passé la méthode en static pour éviter des erreurs dans la classe program
+            //j'ai passé la méthode en static pour éviter des erreurs dans la classe program Kerian 21h30
             int index=0;
-            if(_listJeton[index].Occurrence>0)
+            if(Sac._listJeton[index].Occurrence>0)
             {
                 //Génère un index aléatoire et retourne le Jeton de la liste à l'index correspondant.
-                index = r.Next(_listJeton.Count);
-                _listJeton[index].Occurrence--; //retire une occurrence du jeton dans le jeu
-                return _listJeton[index];
+                index = r.Next(Sac._listJeton.Count);
+                Sac._listJeton[index].Occurrence--; //retire une occurrence du jeton dans le jeu
+                return Sac._listJeton[index];
+                //nécessaire d'écrire Sac._listJeton pour permettre de passer la méthode en static
             }
             else
             {
