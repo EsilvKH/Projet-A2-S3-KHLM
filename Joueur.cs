@@ -12,6 +12,13 @@ namespace Projet_A2_S3
         private int score;
         //private string[] motsTrouvés;
         private List<string> motsTrouvés;
+        
+        public string Nom
+        {
+            get { return nom; }
+            set { nom = value; } //Nécessaire car on va créer deux personnages donc on doit pouvoir modifier la caractéristique nom
+        }
+
         public Joueur(string nom)
         {
             this.nom = nom;
