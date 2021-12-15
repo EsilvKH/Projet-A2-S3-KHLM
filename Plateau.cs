@@ -56,11 +56,41 @@ namespace Projet_A2_S3
               {
                   if(_plateauMat[ligne,colonne] != null)
                   {
-                      //je me suis arrêté là
+                    if (_plateauMat[ligne, colonne] != null)
+                    {
+                        plac = false;
+                        
+                    }
                   }
               }
             }
+            if (direction == 'h')
+            {
+                for(int j = 0; j < mot.Length; j++)
+                {
+                    if (_plateauMat[ligne, colonne] != null)
+                    {
+                        plac = false;
+                    }
+                }
+            }
+            return plac;
+            //Je viens de le modifier 15/12 19h50 Kerian
         }
+                public bool dico(string mot, Dictionnaire Dico)
+        {
+            bool présence = false;
+            for(int m=0; m< Dico.ListeDeMots.Count; m++)
+            {
+                if (Dico.ListeDeMots[m] == mot)
+                {
+                    présence = true;
+                }
+            }
+            return présence;
+            //Modifié le 15/12 à 19h50 Kerian
+        }
+        
         public Jeton[,] TextToPlateau(string[] Lignes, Sac_Jetons sacjeton)//cette méthode permet de passer un texte de plateau en matrice de Jetons
         {
             for(int i = 0; i < Lignes.Length; i++)//on parcourt les lignes du tableau de texte
