@@ -57,6 +57,7 @@ namespace Projet_A2_S3
             }
             else
             {
+                //retourne un null si le nombre d'occurrence du jeton dans la partie est déjà à 0;
                 return null;
             }
 
