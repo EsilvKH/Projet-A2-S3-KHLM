@@ -47,9 +47,19 @@ namespace Projet_A2_S3
         }
         public Jeton retire_jeton(Random r)
         {
-            //Génère un index aléatoire et retourne le Jeton de la liste à l'index correspondant.
-            int index = r.Next(_listJeton.Count);
-            return _listJeton[index];
+            int index=0;
+            if(_listJeton[index].Occurrence>0)
+            {
+                //Génère un index aléatoire et retourne le Jeton de la liste à l'index correspondant.
+                index = r.Next(_listJeton.Count);
+                _listJeton[index].Occurrence--; //retire une occurrence du jeton dans le jeu
+                return _listJeton[index];
+            }
+            else
+            {
+                return null;
+            }
+
         }
 
     }
