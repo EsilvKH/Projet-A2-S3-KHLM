@@ -47,6 +47,7 @@ namespace Projet_A2_S3
         }
         public static Jeton retire_jeton(Random r)
         {
+            //j'ai passé la méthode en static pour éviter des erreurs dans la classe program
             int index=0;
             if(_listJeton[index].Occurrence>0)
             {
