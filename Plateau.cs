@@ -36,16 +36,18 @@ namespace Projet_A2_S3
                 _plateauMat = new Jeton[15, 15];//Plateau vide
             }
         }
-        public bool Test_Plateau(string mot,int ligne, int colonne, char direction)
+        public bool Test_PlateauBis(string mot, int ligne, int colonne, char direction, Dictionnaire Dico)
         {
+            bool appartient = true;
             //Il peut être placé sur le plateau en vertical ou horizontal
-            if(!placement(mot, ligne, colonne, direction))return false;
+            if (!placement(mot, ligne, colonne, direction)) appartient= false;
             //Il appartient au dictionnaire
-            if(!dico(mot))return false;
+            if (!dico(mot,Dico)) appartient=false;
             //Les lettres de la main utiles au mot appartiennent bien à la main 
-            if(!main(mot))return false;
+            //if (!main(mot)) return false;
             //Tous les mots qui se croisent sont éligibles
-            if(!mots())return false;
+            //if (!mots()) return false;
+            return appartient;
         }
         public bool placement(string mot, int ligne, int colonne, char direction)
         {
