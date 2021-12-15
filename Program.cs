@@ -78,7 +78,7 @@ namespace Projet_A2_S3
             
             Sac_Jetons sacJeton = new Sac_Jetons();
             Jeton jetonRand = sacJeton.retire_jeton(new Random());
-            Dictionnaire dico = new Dictionnaire("Francais", 4);
+            Dictionnaire dico = new Dictionnaire(4,"Francais");
             Plateau plateau = new Plateau(sacJeton);
             Console.ReadLine();
 
