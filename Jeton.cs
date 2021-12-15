@@ -34,7 +34,7 @@ namespace Projet_A2_S3
             //Découpe une chaîne de caractères selon le caractère ; 
             string[] sousChaîne = chaîne.Split(';');
             //Créée une instance de jeton avec les sous chaînes de la découpe.
-            Jeton jeton = new Jeton(Convert.ToChar(sousChaîne[0]), Convert.ToInt32(sousChaîne[1]), Convert.ToInt32(sousChaîne[3]));
+            Jeton jeton = new Jeton(Convert.ToChar(sousChaîne[0]), Convert.ToInt32(sousChaîne[1]), Convert.ToInt32(sousChaîne[2]));
             //Exemple Jeton A;1;9 :
             //souschaîne[0]=A , souschaîne[1]=1 , souschaîne[2]=9
             //On rentre ensuite dans le constructeur Jeton(souschaîne[0],souschaîne[1],souschaîne[2])
