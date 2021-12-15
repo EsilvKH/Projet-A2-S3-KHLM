@@ -23,7 +23,7 @@ namespace Projet_A2_S3
             Joueur Joueur2 = new Joueur(nomJoueur2);
             //On créé deux instances de la classe joueur.
             
-            static void AjouterMainCouranteJ1(Jeton[] MainCouranteJoueur1)
+            static void AjouterMainCouranteJ1(Jeton[] MainCouranteJoueur1,Sac_Jetons Sac)
             {
                 int compteurDajout = 0;
                 int[] tableauIndicesVides = new int[7] {1,1,1,1,1,1,1 }; //On créé un table de longueur 7 où 1 représente la présence d'un jeton et 0 l'absence
@@ -43,7 +43,7 @@ namespace Projet_A2_S3
                         {
                             Random r = new Random();//On tire un jeton au hasard de la classe Sac_Jetons
                             int entier = r.Next(26);
-                            MainCouranteJoueur1[j]= Sac_Jetons.retire_jeton(r);
+                            MainCouranteJoueur1[j]= Sac.retire_jeton(r);
                         }
                     }
                 }
