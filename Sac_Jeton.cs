@@ -45,7 +45,7 @@ namespace Projet_A2_S3
             Jeton jeton = new Jeton(Convert.ToChar(sousChaîne[0]), Convert.ToInt32(sousChaîne[1]), Convert.ToInt32(sousChaîne[3]));
             return jeton;
         }
-        public Jeton retire_jeton(Random r)
+        public static Jeton retire_jeton(Random r)
         {
             int index=0;
             if(_listJeton[index].Occurrence>0)
