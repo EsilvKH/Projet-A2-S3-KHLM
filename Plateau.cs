@@ -9,6 +9,7 @@ namespace Projet_A2_S3
     class Plateau
     {
         private Jeton[,] _plateauMat;
+        private int[,] poids=new int[15,15];//Crée une matrice qui initialise le poids de chaque case
         public Jeton[,] PlateauMat
         {
             get
@@ -93,6 +94,26 @@ namespace Projet_A2_S3
                 Console.WriteLine();
             }
             return affichage;
+        }
+        public void PlateauSurConsole()
+        {
+            for(int i=0;i<15;i++)
+            {
+                for(int j=0;j<15;j++)
+                {
+                   switch poids[i,j]
+                   {
+                           case ...
+                               //Ecrire les différents cas du poids.
+                               Console.Background=ConsoleColor.Red;
+                           break;
+                           //Ecrire matrice d'int, 
+                           Console.resetColor
+                   }
+                }
+            }
+            
+            
         }
 
 
