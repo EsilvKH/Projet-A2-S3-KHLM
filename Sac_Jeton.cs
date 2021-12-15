@@ -42,7 +42,7 @@ namespace Projet_A2_S3
             // - Premier caractère : lettre
             // - Deuxième caractère : score
             // - Troisième caractère : nombres de jetons du même type présents dans le jeu
-            Jeton jeton = new Jeton(Convert.ToChar(sousChaîne[0]), Convert.ToInt32(sousChaîne[1]), Convert.ToInt32(sousChaîne[3]));
+            Jeton jeton = new Jeton(Convert.ToChar(sousChaîne[0]), Convert.ToInt32(sousChaîne[1]), Convert.ToInt32(sousChaîne[2]));
             return jeton;
         }
         public  Jeton retire_jeton(Random r)
