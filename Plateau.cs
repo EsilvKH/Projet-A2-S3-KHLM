@@ -100,6 +100,7 @@ namespace Projet_A2_S3
                 {
                     char LettreTxt = Convert.ToChar(charList[j]);
                     Jeton jeton = sacjeton.ListJeton.FirstOrDefault(x => x.Lettre == LettreTxt);//on reconnaît le jeton selon le caractère lu dans le tableau
+                    jeton.Occurrence--; //retire une occurrence du Jeton dans la partie
                     PlateauMat[i, j] = jeton;//on affecte la valeur du jeton trouvé dans la case i;j de la matrice
                 }
             }
