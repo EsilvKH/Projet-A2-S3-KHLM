@@ -21,6 +21,7 @@ namespace Projet_A2_S3
         public int Occurrence
         {
             get { return _occurrence; }
+            set { _occurrence = value; }
         }
 
         public Jeton(char lettre, int score, int occurrence)
