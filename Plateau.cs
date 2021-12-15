@@ -52,34 +52,39 @@ namespace Projet_A2_S3
         public bool placement(string mot, int ligne, int colonne, char direction)
         {
             bool plac = true;
-            if(direction == 'v')
+            if (direction == 'v')
             {
-              for(int i = 0; i<mot.Length;i++)
-              {
-                  if(_plateauMat[ligne,colonne] != null)
-                  {
-                    if (_plateauMat[ligne, colonne] != null)
+                for (int i = 0; i < mot.Length; i++)
+                {
+                    if (colonne + i > _plateauMat.GetLength(2))
                     {
                         plac = false;
-                        
                     }
-                  }
-              }
+                    if (_plateauMat[ligne, colonne+i] == null)
+                    {
+                        plac = false;
+                        //je me suis arrêté là
+                    }
+                }
             }
             if (direction == 'h')
             {
                 for(int j = 0; j < mot.Length; j++)
                 {
-                    if (_plateauMat[ligne, colonne] != null)
+                    if (ligne + j > _plateauMat.GetLength(1))
+                    {
+                        plac = false;
+                    }
+                    if (_plateauMat[ligne+j, colonne] == null)
                     {
                         plac = false;
                     }
                 }
             }
             return plac;
-            //Je viens de le modifier 15/12 19h50 Kerian
-        }
-                public bool dico(string mot, Dictionnaire Dico)
+        } //Bon
+        
+        public bool dico(string mot, Dictionnaire Dico)
         {
             bool présence = false;
             for(int m=0; m< Dico.ListeDeMots.Count; m++)
