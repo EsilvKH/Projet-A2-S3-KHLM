@@ -63,7 +63,7 @@ namespace Projet_A2_S3
                     if (_plateauMat[ligne, colonne+i] == null)
                     {
                         plac = false;
-                        //je me suis arrêté là
+
                     }
                 }
             }
