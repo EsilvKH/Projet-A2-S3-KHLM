@@ -100,7 +100,9 @@ namespace Projet_A2_S3
         
         public Jeton[,] TextToPlateau(string[] Lignes, Sac_Jetons sacjeton)//cette méthode permet de passer un texte de plateau en matrice de Jetons
         {
-            for(int i = 0; i < Lignes.Length; i++)//on parcourt les lignes du tableau de texte
+            if(sacjeton != null && Lignes !=null)
+            {
+                for(int i = 0; i < Lignes.Length; i++)//on parcourt les lignes du tableau de texte
             {
                 List<string> charList = Lignes[i].Split(';').ToList();//on crée une liste de string et on sépare les char avec split en fonction des ; puis on ajoute chaque mot au tableau
                 for (int j = 0; j < charList.Count; j++)//on parcourt les mots (découpés selon string.Split(";") de la liste de texte et les colonnes de la matrices jetons
@@ -111,6 +113,8 @@ namespace Projet_A2_S3
                     PlateauMat[i, j] = jeton;//on affecte la valeur du jeton trouvé dans la case i;j de la matrice
                 }
             }
+            }
+            else Jeton[,] PlateauMat[,] = new Jeton[15,15]; 
             return PlateauMat;
         }
         public override string ToString()
